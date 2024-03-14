@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="light">Светомузыка</span>
+    <script>
+        setInterval(() => {
+            light.hidden = (parseInt(Math.random() * 2) === 1);
+            document.body.style.backgroundColor = `rgb(${parseInt(Math.random() * 225)}, ${parseInt(Math.random() * 225)}, ${parseInt(Math.random() * 225)})`
+        }, 200)
+    </script>
+</body>
+</html>

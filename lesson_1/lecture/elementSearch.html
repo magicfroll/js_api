@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Первый</td>
+            <td>Второй</td>
+        </tr>
+        <tr>
+            <td>Третий</td>
+            <td>Четвертый</td>
+        </tr>
+    </table>
+    <script>
+        let elements = document.querySelectorAll('tr > td:first-child');
+        for(let element of elements) {
+            console.log(element.textContent);
+        }
+    </script>
+</body>
+</html>
+
+<!-- ● element.getElementsByTagName(tag) ищет элементы по заданному тегу и
+возвращает их коллекцию. Передав звёздочку вместо тега, можно получить
+всех потомков.
+● element.getElementsByClassName(className) возвращает элементы, которые
+имеют данный CSS-класс.
+● document.getElementsByName(name) возвращает элементы с заданным
+атрибутом name. -->
