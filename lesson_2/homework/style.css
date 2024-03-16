@@ -1,0 +1,56 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+  }
+  
+.slides {
+    display: flex;
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+}
+
+.slides img.active {
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+.dots {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: red;
+}
