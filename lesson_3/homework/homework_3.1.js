@@ -1,4 +1,4 @@
-const accessKey = 'GeQCAkYhARGeV7bg6NSl1fAM53DLTY9fFRgMzQ6MCVk';
+const accessKey = '';
 const endpoint = 'https://api.unsplash.com/photos/random/?client_id=' + accessKey;
 
 const photoContainer = document.getElementById('photo-container');
