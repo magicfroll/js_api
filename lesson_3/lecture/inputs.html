@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="superForm">
+        <p>
+            email: <input type="email" name="email" >
+        </p>
+        <select name="selectForm">
+            <option value="GeekBrains" selected>GeekBrains</option>
+            <option value="SkillBox" selected>SkillBox</option>
+            <option value="SkillFactory">SkillFactory</option>
+          </select>
+        <p>
+            checkbox: <input type="checkbox" name="checkbox">
+        </p>
+    </form>
+
+    <script>
+        const form = document.forms.superForm;
+
+        form.email.onchange = () => {
+            console.log('chage - email: ', form.email.value);
+        }
+        form.email.oninput = () => {
+            console.log('imput - email: ', form.email.value);
+        }
+
+        form.selectForm.onchange = () => {
+            console.log('change - selectForm: ', form.selectForm.value );
+        }
+        form.selectForm.oninput = () => {
+            console.log('input - selectForm: ', form.selectForm.value );
+        }
+
+        form.checkbox.onchange = () => {
+            console.log('change - checkbox: ', form.checkbox.value );
+        }
+        form.checkbox.oninput = () => {
+            console.log('input - checkbox: ', form.checkbox.value );
+        }
+
+        form.email.oncut = form.email.oncopy = form.email.onpaste = (event) => {
+            console.log(event.type + ' - ' + event.clipboardData.getData('text/plain'));
+        }
+    </script>
+</body>
+</html>
